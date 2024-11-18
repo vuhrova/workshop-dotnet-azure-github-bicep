@@ -24,3 +24,12 @@ module keyvault './keyvault.bicep' = {
         appName: '${myName}-${environment}' // key vault has 24 char max so just doing your name, usually would do appname-env but that'll conflict for everyone
       }
     }
+
+    module monitor './monitor.bicep' = {
+      name: 'monitor'
+      params: {
+        appName: '${myName}-${environment}'
+        keyVaultName: keyvault.outputs.keyVaultName
+        location: location
+      }
+    }
