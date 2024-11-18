@@ -3,7 +3,7 @@ param environment string
 
 targetScope = 'resourceGroup'
 var location = 'centralus'
-var myName = 'scottsauber'
+var myName = 'vuhrova'
 
 module appService 'appservice.bicep' = {
   name: 'appservice'
