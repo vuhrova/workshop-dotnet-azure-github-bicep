@@ -26,7 +26,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: 'asp-workshop-${appName}-${myName}-${environment}'
   location: location
   sku: {
-    name: 'S1'
+    name: 'P0V3'
   }
   kind: 'linux'
   properties: {
